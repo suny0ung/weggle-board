@@ -1,10 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import * as ReactDOM from 'react-dom/client';
+import Router from './Router';
+import { RecoilRoot } from 'recoil';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const rootElement = document.getElementById('root')!;
+// if (!rootElement) throw new Error('Failed to find the root element');
+ReactDOM.createRoot(rootElement).render(
+  <ChakraProvider theme={theme}>
+    <RecoilRoot>
+      <Router />
+    </RecoilRoot>
+  </ChakraProvider>
 );
