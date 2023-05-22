@@ -2,18 +2,8 @@ import { Select } from '@chakra-ui/react';
 import { useSetRecoilState } from 'recoil';
 import { limit } from '../recoli/listState';
 
-// type props = {
-//   setOptionNumber: Dispatch<SetStateAction<number>>;
-// };
-
 const SelectBox = () => {
   const setLimitValue = useSetRecoilState(limit);
-  // const setLimitValue = useSetRecoilState(listState);
-
-  //Select태그의 onChange이벤트로 option태그를 클락할때마다,
-  //해당 value값을 setOptionNumber로 업데이트
-  //업데이트 된 optionNumber로 map으로 나열하는 리스트 페이지에서
-  //0 ~ optionNumber까지만큼만 보여지게 -> slice함수 사용
 
   const getOptionNum = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOption = Number(e.target.value);
@@ -24,9 +14,9 @@ const SelectBox = () => {
     <div>
       <Select
         onChange={getOptionNum}
-        width="20%"
-        height="35px"
         placeholder="나열선택"
+        width="20%"
+        height=" 35px"
         fontSize="0.78rem"
         textAlign="center"
       >

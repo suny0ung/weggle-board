@@ -32,11 +32,11 @@ const ListMenuWrap = styled.div`
 
 const ListWrap = styled.div`
   max-height: 70vh;
-  min-height: 180px;
+  min-height: 200px;
 
   overflow: hidden;
   border-bottom: 1px solid #999;
-  @media screen and (max-height: 500px) {
+  @media screen and (max-height: 600px) {
     overflow-y: scroll;
   }
 `;
@@ -53,6 +53,6 @@ const MenuTitle = styled.div`
 `;
 
 const MenuDate = styled(MenuNum)`
-  width: 20%;
+  width: 25%;
   padding: 5px 0;
 `;
