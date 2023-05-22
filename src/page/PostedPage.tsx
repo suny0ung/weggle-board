@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { Button, Center } from '@chakra-ui/react';
+import { Button, Center, Textarea } from '@chakra-ui/react';
 import { useRecoilState } from 'recoil';
 import { listState } from '../recoli/listState';
 import styled from '@emotion/styled';
@@ -118,7 +118,6 @@ const TitleDiv = styled.div`
   width: 100%;
   padding-left: 20px;
   font-size: 25px;
-  /* font-size: 16px; */
 `;
 
 const ContentTopWrap = styled.div`
@@ -151,10 +150,7 @@ const DateDiv = styled.div`
 
 const ContentBodyWrap = styled.div``;
 
-const EditContentInput = styled.input`
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: flex-start; */
+const EditContentInput = styled(Textarea)`
   vertical-align: top;
   width: 100%;
   height: 40vh;
